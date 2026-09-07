@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - E-Commerce Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span>Shop</span>Ease
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="small-title">WELCOME TO SHOPEASE</p>
+
+            <h1>Find Products<br>You'll <span>Love.</span></h1>
+
+            <p>
+                Discover the latest fashion, electronics and accessories
+                at amazing prices.
+            </p>
+
+            <a href="#products" class="shop-btn">Shop Now →</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="hero-circle">
+                🛍️
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Shop By Category</h2>
+
+        <div class="category-buttons">
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('electronics')">Electronics</button>
+            <button onclick="filterProducts('fashion')">Fashion</button>
+            <button onclick="filterProducts('shoes')">Shoes</button>
+            <button onclick="filterProducts('accessories')">Accessories</button>
+        </div>
+    </section>
+
+
+    <!-- Products -->
+    <section class="products-section" id="products">
+
+        <div class="section-header">
+            <div>
+                <p class="small-title">OUR PRODUCTS</p>
+                <h2>Popular Products</h2>
+            </div>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 Search products..."
+                onkeyup="searchProducts()"
+            >
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div>
+            <p class="small-title">ABOUT US</p>
+            <h2>Shopping Made Simple</h2>
+
+            <p>
+                ShopEase is a demo online store built with HTML, CSS
+                and JavaScript. You can use this project as a starting
+                point for your own e-commerce website.
+            </p>
+        </div>
+
+        <div class="features">
+            <div>
+                <strong>🚚</strong>
+                <h3>Fast Delivery</h3>
+                <p>Quick and reliable delivery.</p>
+            </div>
+
+            <div>
+                <strong>🔒</strong>
+                <h3>Secure Payment</h3>
+                <p>Your payments are protected.</p>
+            </div>
+
+            <div>
+                <strong>↩️</strong>
+                <h3>Easy Returns</h3>
+                <p>Simple return policy.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div>
+            <h2>ShopEase</h2>
+            <p>Your favorite products, all in one place.</p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>Email: support@shopease.com</p>
+            <p>Phone: +91 98765 43210</p>
+        </div>
+    </footer>
+
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+
+            <button onclick="closeCart()">✕</button>
+        </div>
+
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cart-total">₹0</strong>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">
+                Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <script src="script.js"></script>
+
+</body>
+      </html>
